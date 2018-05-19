@@ -47,10 +47,10 @@ namespace Projekt
 
         private void Mannschaften_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            
-            //listBox.Items.Add(Mannschaften.SelectedItem);
 
-            using (StreamReader r = new StreamReader(@"D:\SewProjekt\Projekt\Projekt\bin\Debug\Ronaldo.txt"))//StreamReader mit deiner Datei erstellen
+            //listBox.Items.Add(Mannschaften.SelectedItem);
+            try { 
+            using (StreamReader r = new StreamReader(@"G:\SewProjekt\Projekt\Projekt\bin\Debug\Ronaldo.txt"))//StreamReader mit deiner Datei erstellen
             {
 
 
@@ -60,13 +60,19 @@ namespace Projekt
                 }
 
             }
+            }
+            catch(FileNotFoundException)
+            {
+                MessageBox.Show("Kein File gefunden!");
+            }
+
         }
 
         private void listBox2_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             
 
-            using (StreamReader r = new StreamReader(@"D:\SewProjekt\Projekt\Projekt\bin\Debug\Zidane.txt"))//StreamReader mit deiner Datei erstellen
+            using (StreamReader r = new StreamReader(@"G:\SewProjekt\Projekt\Projekt\bin\Debug\Zidane.txt"))//StreamReader mit deiner Datei erstellen
             {
 
                 
