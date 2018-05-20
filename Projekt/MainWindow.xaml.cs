@@ -35,7 +35,12 @@ namespace Projekt
            new Trainer("jow", "jow"),
             };
 
-        public MainWindow()
+        Stack<Spieler> st = new Stack<Spieler>();
+   
+            
+            
+
+    public MainWindow()
         {
 
             InitializeComponent();
@@ -43,6 +48,14 @@ namespace Projekt
             Mannschaften.ItemsSource = s;
 
             listBox2.ItemsSource = t;
+            for (int i = 0; i < s.Count; i++)
+            {
+
+
+                st.Push(s[i]);
+
+
+            }
         }
 
         private void Mannschaften_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -85,11 +98,32 @@ namespace Projekt
             }
         }
 
-        
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+
+
+
+            try {
+
+                listBox1.Items.Add(st.Pop());
+            }
+
+            catch(System.InvalidOperationException)
+            {
+                MessageBox.Show("Keine Elemente mehr vorhanden!");
+            }
+           
+           
 
 
 
 
+
+
+
+
+
+        }
     }
     }
 
