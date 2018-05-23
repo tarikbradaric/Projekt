@@ -63,13 +63,13 @@ namespace Projekt
 
             //listBox.Items.Add(Mannschaften.SelectedItem);
             try { 
-            using (StreamReader r = new StreamReader(@"G:\SewProjekt\Projekt\Projekt\bin\Debug\Ronaldo.txt"))//StreamReader mit deiner Datei erstellen
+            using (StreamReader r = new StreamReader("Ronaldo.txt"))//StreamReader mit deiner Datei erstellen
             {
 
 
                 if(Convert.ToString(Mannschaften.SelectedItem) == "Cristiano Ronaldo")
                 {
-                 listBox.Items.Add(System.IO.File.ReadAllText(@"Ronaldo.txt"));
+                 listBox.Items.Add(System.IO.File.ReadAllText("Ronaldo.txt"));
                 }
 
             }
@@ -85,14 +85,14 @@ namespace Projekt
         {
             
 
-            using (StreamReader r = new StreamReader(@"G:\SewProjekt\Projekt\Projekt\bin\Debug\Zidane.txt"))//StreamReader mit deiner Datei erstellen
+            using (StreamReader r = new StreamReader("Zidane.txt"))//StreamReader mit deiner Datei erstellen
             {
 
                 
 
                 if (listBox2.SelectedItem.ToString() == "Zinedin Zidane")
                 {
-                    listBox.Items.Add(System.IO.File.ReadAllText(@"Zidane.txt"));
+                    listBox.Items.Add(System.IO.File.ReadAllText("Zidane.txt"));
                 }
 
             }
@@ -106,6 +106,12 @@ namespace Projekt
             try {
 
                 listBox1.Items.Add(st.Pop());
+
+                //int counter = s.Count -1;
+                
+                //s.RemoveAt(counter);
+                //counter--;
+                
             }
 
             catch(System.InvalidOperationException)
