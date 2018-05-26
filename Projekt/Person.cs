@@ -13,8 +13,14 @@ namespace Projekt
        
      
 
-        public int Groeße { get; }
+        
         public string Vorname { get; }
         public string Nachname { get; }
+
+        public Person(string vname, string nname)
+        {
+            Vorname = vname;
+            Nachname = nname;
+        }
     }
 }

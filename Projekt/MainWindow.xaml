@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <ListBox x:Name="Mannschaften" HorizontalAlignment="Left" Height="177" Margin="303,135,0,0" VerticalAlignment="Top" Width="132" RenderTransformOrigin="0.5,0.5" SelectionChanged="Mannschaften_SelectionChanged">
+        <ListBox x:Name="Mannschaften" HorizontalAlignment="Left" Height="177" Margin="342,134,0,0" VerticalAlignment="Top" Width="162" RenderTransformOrigin="0.5,0.5" SelectionChanged="Mannschaften_SelectionChanged">
             <ListBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -17,11 +17,21 @@
                 </TransformGroup>
             </ListBox.RenderTransform>
         </ListBox>
-        <TextBox x:Name="filename" HorizontalAlignment="Left" Height="23" Margin="107,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="100" Margin="43,198,0,0" VerticalAlignment="Top" Width="100"/>
-        <ListBox x:Name="listBox2" HorizontalAlignment="Left" Height="100" Margin="54,72,0,0" VerticalAlignment="Top" Width="100" SelectionChanged="listBox2_SelectionChanged"/>
-        <ListBox x:Name="listBox1" HorizontalAlignment="Left" Height="100" Margin="370,10,0,0" VerticalAlignment="Top" Width="100"/>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="240,78,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
+        <TextBox x:Name="filename" HorizontalAlignment="Left" Height="23" Margin="45,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="100" Margin="10,209,0,0" VerticalAlignment="Top" Width="190"/>
+        <ListBox x:Name="listBox2" HorizontalAlignment="Left" Height="123" Margin="10,69,0,0" VerticalAlignment="Top" Width="190" SelectionChanged="listBox2_SelectionChanged"/>
+        <ListBox x:Name="listBox1" HorizontalAlignment="Left" Height="100" Margin="371,24,0,0" VerticalAlignment="Top" Width="114"/>
+        <Button x:Name="button" Content="Spieler-Button" HorizontalAlignment="Left" Margin="230,13,0,0" VerticalAlignment="Top" Width="85" Click="button_Click"/>
+        <Button x:Name="button1" Content="Ronaldo" HorizontalAlignment="Left" Margin="240,97,0,0" VerticalAlignment="Top" Width="75" Click="button1_Click"/>
+        <Button x:Name="button2" Content="Messi" HorizontalAlignment="Left" Margin="240,122,0,0" VerticalAlignment="Top" Width="75" Click="button2_Click"/>
+        <Button x:Name="button3" Content="Neymar" HorizontalAlignment="Left" Margin="240,147,0,0" VerticalAlignment="Top" Width="75" Click="button3_Click"/>
+        <Button x:Name="button4" Content="Aguero" HorizontalAlignment="Left" Margin="240,172,0,0" VerticalAlignment="Top" Width="75" Click="button4_Click"/>
+        <Button x:Name="button5" Content="Zidane" HorizontalAlignment="Left" Margin="240,214,0,0" VerticalAlignment="Top" Width="75" Click="button5_Click"/>
+        <Button x:Name="button6" Content="Gurdiola" HorizontalAlignment="Left" Margin="240,239,0,0" VerticalAlignment="Top" Width="75" Click="button6_Click"/>
+        <Button x:Name="button7" Content="Kloppo" HorizontalAlignment="Left" Margin="240,264,0,0" VerticalAlignment="Top" Width="75" Click="button7_Click"/>
+        <Button x:Name="button8" Content="Mourinho" HorizontalAlignment="Left" Margin="240,289,0,0" VerticalAlignment="Top" Width="75" Click="button8_Click"/>
+        <Label x:Name="label" Content="Erinnerungs-Liste:" HorizontalAlignment="Left" Margin="373,-3,0,0" VerticalAlignment="Top" Width="112"/>
+        <Button x:Name="button9" Content="Trainer-Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" Margin="230,38,0,0" Click="button9_Click"/>
 
     </Grid>
 </Window>

@@ -8,24 +8,21 @@ namespace Projekt
 {
     class Trainer : Person
     {
-        
-        private string vname;
-        private string nname;
 
-        public Trainer(string vname, string nname)
+        public string TrainerVon { get; }
+
+
+        public Trainer(string vname, string nname, string trainv): base(vname,nname)
         {
-            
-            this.vname = vname;
-            this.nname = nname;
+            TrainerVon = trainv;
+
         }
 
-        
-        public new string Vorname { get { return vname; } }
-        public new string Nachname { get { return nname; } }
+
 
         public override string ToString()
         {
-            return Vorname + " " + Nachname;
+            return Vorname + " " + Nachname + "(" + "Trainer von " + TrainerVon + ")";
         }
     }
 }

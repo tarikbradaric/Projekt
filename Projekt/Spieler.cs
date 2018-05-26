@@ -8,24 +8,22 @@ namespace Projekt
 {
     class Spieler : Person
     {
-      
-        private string vname;
-        private string nname;
 
-        public Spieler(string vname, string nname)
+        public string SpielerVon { get; }
+
+
+        public Spieler(string vname, string nname, string spielv): base(vname,nname)
         {
+            SpielerVon = spielv;
             
-            this.vname = vname;
-            this.nname = nname;
         }
 
-        
-        public new string Vorname { get { return vname; } }
-        public new string Nachname { get { return nname; } }
+
+
 
         public override string ToString()
         {
-            return Vorname + " " + Nachname;
+            return Vorname + " " + Nachname + "(" + "Spieler von " + SpielerVon + ")";
         }
 
 
