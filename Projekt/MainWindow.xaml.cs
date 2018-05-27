@@ -23,9 +23,9 @@ namespace Projekt
 
         ObservableCollection<Spieler> s = new ObservableCollection<Spieler> {
            new Spieler("Cristiano", "Ronaldo","Real Madrid"),
-           new Spieler("Lionel", "Messi","Real Madrid"),
-           new Spieler("Neymar", "JR","Real Madrid"),
-           new Spieler("Sergio", "Aguero","Real Madrid"),
+           new Spieler("Lionel", "Messi","FC Barcelona"),
+           new Spieler("Neymar", "JR","PSG"),
+           new Spieler("Sergio", "Aguero","Man City"),
             };
 
         ObservableCollection<Trainer> t = new ObservableCollection<Trainer> {
@@ -98,7 +98,7 @@ namespace Projekt
             {
 
                 try { 
-                if (Convert.ToString(Mannschaften.SelectedItem) == "Lionel Messi(Spieler von Real Madrid)") 
+                if (Convert.ToString(Mannschaften.SelectedItem) == "Lionel Messi(Spieler von FC Barcelona)") 
                 {
                     listBox.Items.Add(System.IO.File.ReadAllText("Messi.txt")); 
                 }
@@ -116,7 +116,7 @@ namespace Projekt
 
                 try
                 {
-                    if (Convert.ToString(Mannschaften.SelectedItem) == "Neymar JR(Spieler von Real Madrid)")
+                    if (Convert.ToString(Mannschaften.SelectedItem) == "Neymar JR(Spieler von PSG)")
                     {
                         listBox.Items.Add(System.IO.File.ReadAllText("Neymar.txt"));
                     }
@@ -134,7 +134,7 @@ namespace Projekt
 
                 try
                 {
-                    if (Convert.ToString(Mannschaften.SelectedItem) == "Sergio Aguero(Spieler von Real Madrid)")
+                    if (Convert.ToString(Mannschaften.SelectedItem) == "Sergio Aguero(Spieler von Man City)")
                     {
                         listBox.Items.Add(System.IO.File.ReadAllText("Aguero.txt"));
                     }
