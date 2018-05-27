@@ -5,40 +5,56 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projekt"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        <ListBox x:Name="Mannschaften" HorizontalAlignment="Left" Height="177" Margin="325,134,0,0" VerticalAlignment="Top" Width="178" RenderTransformOrigin="0.5,0.5" SelectionChanged="Mannschaften_SelectionChanged">
-            <ListBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-0.086"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </ListBox.RenderTransform>
-        </ListBox>
-        <TextBox x:Name="filename" HorizontalAlignment="Left" Height="23" Margin="173,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="100" Margin="95,209,0,0" VerticalAlignment="Top" Width="220"/>
-        <ListBox x:Name="listBox2" HorizontalAlignment="Left" Height="123" Margin="95,75,0,0" VerticalAlignment="Top" Width="208" SelectionChanged="listBox2_SelectionChanged"/>
-        <ListBox x:Name="listBox1" HorizontalAlignment="Left" Height="100" Margin="320,24,0,0" VerticalAlignment="Top" Width="187"/>
+        Title="MainWindow" Height="362" Width="555">
+    <Grid x:Name="grid">
+        <DockPanel Width="{Binding ActualWidth, ElementName=grid}" Height="{Binding ActualHeight, ElementName=grid}">
+            <StackPanel DockPanel.Dock="Left" Width="90" Height="{Binding ActualHeight, ElementName=grid}">
+                <Button Content="Spieler-Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="86" Click="button_Click" />
+                <Button Content="Trainer-Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="86"  Click="button9_Click"/>
+                <Button Content="Ronaldo" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="86" Click="button1_Click"/>
+                <Button Content="Messi" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="86" Click="button2_Click"/>
+                <Button  Content="Neymar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="86" Click="button3_Click"/>
+                <Button  Content="Aguero" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="86" Click="button4_Click"/>
+                <Button  Content="Zidane" HorizontalAlignment="Left" VerticalAlignment="Top" Width="86" Click="button5_Click"/>
+                <Button Content="Kloppo" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="86" Click="button7_Click"/>
+                <Button  Content="Mourinho" HorizontalAlignment="Left" VerticalAlignment="Top" Width="86" Click="button8_Click"/>
+            </StackPanel>
+
+            <StackPanel x:Name="st_erinnerung" DockPanel.Dock="Right" Margin="0,0,0,-0.333" Width="167" Height="{Binding ActualHeight, ElementName=grid}">
+                    <Label x:Name="label" Content="Erinnerungs-Liste:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="{Binding ActualWidth, ElementName=st_erinnerung}" Margin="0,0,0,0"/>
+                    <ListBox x:Name="listBox1" Height="100" VerticalAlignment="Top" Width="{Binding ActualWidth, ElementName=st_erinnerung}" Margin="0,20,-0.333,0"/>
+                    <ListBox x:Name="Mannschaften" Height="177" VerticalAlignment="Top" Width="{Binding ActualWidth, ElementName=st_erinnerung}" RenderTransformOrigin="0.5,0.5" SelectionChanged="Mannschaften_SelectionChanged" Margin="0,0,-0.333,0">
+                        <ListBox.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-0.086"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </ListBox.RenderTransform>
+                    </ListBox>
+                </StackPanel>
+         
 
 
-        <Label x:Name="label" Content="Erinnerungs-Liste:" HorizontalAlignment="Left" Margin="373,-3,0,0" VerticalAlignment="Top" Width="112"/>
-    
 
 
-        <StackPanel  HorizontalAlignment="Left" Width="90">
-            <Button Content="Spieler-Button" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="86" Click="button_Click" />
-            <Button Content="Trainer-Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="86"  Click="button9_Click"/>
-            <Button Content="Ronaldo" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="86" Click="button1_Click"/>
-            <Button Content="Messi" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="86" Click="button2_Click"/>
-            <Button  Content="Neymar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="86" Click="button3_Click"/>
-            <Button  Content="Aguero" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="86" Click="button4_Click"/>
-            <Button  Content="Zidane" HorizontalAlignment="Left" VerticalAlignment="Top" Width="86" Click="button5_Click"/>
-            <Button Content="Kloppo" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="86" Click="button7_Click"/>
-            <Button  Content="Mourinho" HorizontalAlignment="Left" VerticalAlignment="Top" Width="86" Click="button8_Click"/>
+
+            <TextBox DockPanel.Dock="Top" x:Name="filename" HorizontalAlignment="Center" Margin="-50,0,0,0" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+            <StackPanel x:Name="sp_Infos" VerticalAlignment="Bottom" Width="234" DockPanel.Dock="Bottom" Height="221">
+                <ListBox x:Name="listBox2" Height="123" VerticalAlignment="Center" Width="{Binding ActualWidth, ElementName=sp_Infos}" SelectionChanged="listBox2_SelectionChanged" Background="White"/>
+                <ListBox x:Name="listBox" Height="100" VerticalAlignment="Top" Width="{Binding ActualWidth, ElementName=sp_Infos}"/>
+            </StackPanel>
 
 
-        </StackPanel>
+
+
+
+
+
+
+
+        </DockPanel>
     </Grid>
 </Window>
